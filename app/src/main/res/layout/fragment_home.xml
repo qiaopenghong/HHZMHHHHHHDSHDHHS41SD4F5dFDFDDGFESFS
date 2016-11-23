@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/home_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/new_person_gift_bottom2"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/home_scan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@mipmap/advanced_auth_unchecked" />
+
+        <LinearLayout
+            android:id="@+id/search_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_weight="0.7"
+            android:background="#eee"
+            android:orientation="horizontal"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:src="@mipmap/icon_search_home" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="费雪"
+                android:textScaleX="1.5"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_weight="0.1"
+            android:src="@mipmap/icon_mes_top" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/home_ll">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--红孩子母婴主页ViewPger导航栏-->
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="165dp">
+                <!--无限轮播viewPager-->
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/home_vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"></android.support.v4.view.ViewPager>
+                <!--无限轮播小圆点-->
+                <LinearLayout
+                    android:id="@+id/home_vp_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"></LinearLayout>
+            </RelativeLayout>
+            <!--签到领钱 -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclserview"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_below="@id/relativeLayout"
+                android:orientation="horizontal"></android.support.v7.widget.RecyclerView>
+            <!--10点秒杀-->
+            <ImageView
+                android:id="@+id/i"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/recyclserview"
+                android:src="@mipmap/ic_launcher" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclserview1"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@id/i"
+                android:orientation="horizontal"></android.support.v7.widget.RecyclerView>
+            <!--傲娇品牌-->
+            <ImageView
+                android:id="@+id/home_aojiao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclserview1"></ImageView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclserview2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/home_aojiao"
+                android:orientation="horizontal"></android.support.v7.widget.RecyclerView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclserview3"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/recyclserview2"
+                android:orientation="horizontal"></android.support.v7.widget.RecyclerView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclserview4"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/recyclserview3"
+                android:orientation="horizontal"></android.support.v7.widget.RecyclerView>
+            <!--母婴专区-->
+            <ImageView
+                android:id="@+id/home_myin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclserview4"></ImageView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclserview5"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_below="@id/home_myin"
+                android:orientation="horizontal"></android.support.v7.widget.RecyclerView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclserview6"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/recyclserview5"
+                android:orientation="horizontal"></android.support.v7.widget.RecyclerView>
+            <!--主题特卖-->
+            <ImageView
+                android:id="@+id/home_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclserview6" />
+            <!--洋货超值购-->
+            <ImageView
+                android:id="@+id/home_haiwai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/home_title" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclserview7"
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:layout_below="@id/home_haiwai"></android.support.v7.widget.RecyclerView>
+            <!--聚优、聚省、聚惠-->
+            <ImageView
+                android:id="@+id/home_bighui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclserview7" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclserview8"
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:layout_below="@id/home_bighui"></android.support.v7.widget.RecyclerView>
+            <!--量版惠-->
+            <ImageView
+                android:id="@+id/home_lianghui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclserview8" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclserview9"
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:layout_below="@id/home_lianghui"></android.support.v7.widget.RecyclerView>
+            <!--省钱备好货-->
+            <ImageView
+                android:id="@+id/home_bie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclserview9" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclserview10"
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:layout_below="@id/home_bie"></android.support.v7.widget.RecyclerView>
+            <!--辣妈拼团-->
+            <ImageView
+                android:id="@+id/home_lama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclserview10" />
+
+            <ImageView
+                android:id="@+id/hl_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/home_lama" />
+
+            <ImageView
+                android:id="@+id/hl_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hl_one" />
+
+            <ImageView
+                android:id="@+id/hl_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hl_two" />
+
+            <ImageView
+                android:id="@+id/hl_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hl_three" />
+
+            <ImageView
+                android:id="@+id/hl_five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hl_four" />
+            <ImageView
+                android:id="@+id/hl_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hl_five" />
+            <TextView
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_below="@id/hl_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#eee"
+                android:gravity="center_horizontal"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:text="——到底啦，明天10点一元秒杀，千万别错过哦~——"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
